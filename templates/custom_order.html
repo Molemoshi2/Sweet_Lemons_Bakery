@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title%}
+    Custom order
+{% endblock %}
+
+{% block content%}
+ <h2>Need a Custom designed cake?</h2>
+ <form action="{{ url_for('custom_order') }}"  method="POST" enctype="multipart/form-data" >
+     <fieldset class="login">
+         <h3>Customize your order</h3>
+         <p>
+             {{form.email.label}} <br>
+                {{form.email()}}
+         </p>
+         <p>
+             {{form.Cake_layers.label}}<br>
+             {{form.Cake_layers}}
+         </p>
+         <p>
+             {{form.sponge_flavor.label}}<br>
+             {{form.sponge_flavor}}
+         </p>
+         <p>
+             {{form.cake_writing.label}}<br>
+             {{form.cake_writing}}
+         </p>
+         <p>
+             {{form.photo.label}}<br>
+             {{form.photo}}
+         </p>
+         <p>
+                {{form.submit()}}
+         </p>
+
+
+     </fieldset>
+ </form>
+{% endblock %}

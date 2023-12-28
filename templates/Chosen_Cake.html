@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title%}
+    Chosen cake
+{% endblock %}
+
+{% block content%}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<div class="container" id="Products">
+    <h2>🦋   Sweetlemons cake details   🦋</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="data:image/jpeg;base64,{{ product.image.decode('utf-8') }}" alt="{{ product.p_name }}" class="mb-5" width="400" height="400">
+        </div>
+        <div class="col-md-6 mt-3">
+            <h2>{{product.p_name}}</h2>
+            <P class="text-center">Price : R{{product.p_price}} </P>
+            <P class="text-center">Description : {{product.p_description}}</P>
+            <a href="{{ url_for('cart') }}" class="btn btn-sm btn-danger mt-5 ">Add to Cart</a>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

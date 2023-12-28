@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title%}
+    Add Product
+{% endblock %}
+
+{% block content%}
+{% include '_messages.html' %}
+        <h2 class="text-center bg-warning.bg-gradient">Add a product</h2>
+
+<div class="container bg-danger mt-5 mb-5">
+    <div class="row">
+    <div class="col-md-8">
+        {% from "_formhelpers.html" import render_field %}
+        <form method="post" enctype="multipart/form-data">
+                {{ render_field(form.p_name) }}
+                {{ render_field(form.p_price) }}
+                {{ render_field(form.p_description) }}
+                {{ render_field(form.image) }}
+                <p><input type=submit value='Add product' class="btn btn-danger mt-2"></p>
+
+        </form>
+    </div>
+    <div class="col-md-4 mt-5"> <h3>Want to view products in you database?</h3>
+       <a href="{{url_for('admin_page')}}" class="btn btn-danger bg-danger"> <button type="button">View products</button></a>
+    </div>
+    </div>
+</div>
+{% endblock %}

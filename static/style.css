@@ -1,0 +1,195 @@
+/* the whole body */
+body{
+    font-weight: bold;
+    line-height: 1.5;
+    color: white;
+    text-align: center;
+   /* background-color: #FFF5E0;*/
+}
+/* styling the navigation part */
+.logo{
+    font-family: 'lobster',cursive;
+    color:  white;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    text-shadow: 2px 3px 1px lightcoral;
+
+    
+}
+
+.navbar-nav{
+    margin-left: auto;
+}
+.nav-link{
+    color: white;
+    font-size: x-large;
+    font-weight: lighter;
+    text-shadow: 2px 2px 1px lightcoral;
+
+}
+.nav-item{
+    padding: 0 18px;
+}
+.navBTN{
+    text-decoration-color: white;
+}
+
+/* styling the header div */
+h1{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 3.7rem;
+    color: white;
+    margin-top: 100px;
+    padding: 0;
+    display: inline;
+    line-height: 1.5;
+    font-family: cursive;
+    text-shadow: 2px 4px 1px lightcoral;
+}
+#BTN{
+    margin: 60px 150px 60px 60px;
+    box-shadow: 5px 4px 0px palevioletred;
+}
+.head{
+    margin: 0;
+    padding: 30px 50px 0;
+    background-image: url("images/bader-photographer-2vEnKc5KR-Y-unsplash.jpg");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size:cover;   
+}
+img{
+    border-radius: 3%;
+}
+/* styling the carousel */
+
+.myCarousel{
+    padding: 10px;
+    line-height: normal;
+}
+
+
+
+/* styling the middle container */
+
+h2{
+    font-family:'Lobster', cursive;
+    color: #dc3545;
+    font-size: 3.5rem;
+    font-weight: lighter;
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+    text-align: center;
+    
+}
+.my-card{
+    margin-bottom: 4rem;
+}
+.my-card1{
+    padding: 50px 50px;
+    border-radius: 2rem;
+    background-image: url("images/pavithra-salla-QS_pChQcql4-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 400px;
+}
+.my-card2{
+    border-radius: 2rem;
+    background-image: url("images/class.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 400px;
+
+}
+.my-card3{
+    border-radius: 2rem;
+    background-image: url("images/tools3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 400px;
+}
+.pic{
+    size: inherit;
+    border-radius: 4rem;
+}
+/* custom order secttion */
+.custom-order{
+    padding: 50px 100px;
+    background-color: lightcoral;
+}
+/* styling the footer */
+.footer{
+    background-color: lightpink;
+    padding: 50px 100px 5px;
+    color:#dc3545;
+    line-height: 1.5;
+}
+h4{
+    margin-bottom: 100px;
+}
+.social{
+    color: #dc3545;
+    padding-right: 150px;
+}
+.footer_p_tag{
+    margin-top: 90px;
+    margin-bottom: 2px;
+}
+
+/*styling the orders page*/
+
+
+.subhead{
+    text-align:center;
+}
+
+/*styling the product container*/
+
+#Products{
+    text-align:center;
+    color: #dc3545;
+}
+#Products .cake-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+#Products .cakes{
+    width:23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    margin-right: 5px;
+    margin-bottom: 150px;
+}
+/*styling images*/
+.order_pic{
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #DBDBDB;
+    margin-bottom: 11px;
+}
+/*styling for sign up page*/
+form{
+    color:#dc3545;
+    border-style: inset;
+    border-color: #dc3545;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-image: url("images/tools3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: white;
+    font-size: x-large;
+    font-weight: lighter;
+    text-shadow: 2px 2px 1px lightcoral;
+
+
+}

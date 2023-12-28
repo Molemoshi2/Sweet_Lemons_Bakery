@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetLemonsCo</title>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class=flashes>
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kalam&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<section class="head">
+    <nav class="navbar navbar-expand-lg sticky-top navgation">
+        <a class="navbar-brand"  href="/home" >
+            <h4 class="logo">🦋SweetLemons</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('home_page') }}" >Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('cake_order') }}" >Order</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('signup_page') }}" >learn</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('cart') }}" >Cart 🛒</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url_for('add_product')}}" >Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <h1>Order themed cakes, shop baking tools and more...</h1>
+            <a href="{{ url_for('cake_order') }}"><button id="BTN" type="button" class="btn btn-danger" >Request an order</button></a>
+        </div>
+        <div class="col-lg-6"> 
+                <!-- carousel container -->
+            <div id="carouselExampleIndicators" class="carousel slide myCarousel" data-ride="carousel">
+                    <!-- carousel indicators -->
+                <!-- <ol class="carousel-indicators" id="myIndicator">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol> -->
+                    <!-- wrapper for slides -->
+                <div class="carousel-inner div1">
+                    <!-- slide item -->
+                    <!-- <div class="carousel-item active">
+                        <img class="d-block w-100" src="images/best-cakes-sydney-removebg-preview.png" width="300" height="320" alt=""> -->
+                        <!-- <div class="carousel-caption"></div> -->
+                        <!-- <h5>Cake Designs</h5> -->
+                        <!-- <p>look for cake Designs </p> -->
+                    <!-- </div> -->
+                    <!-- slide item -->
+                    <div class="carousel-item active" >
+                        <img class="d-block w-100" src="static/images/images__5_-removebg-preview.png" width="300" height="320" alt="">
+                        <!-- <div class="carousel-caption"></div>
+                        <h5>Baking tools</h5> -->
+                        <!-- <p>shop baking tools here</p> -->
+                    </div>
+                    <!-- slide item -->
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="static/images/images__4_-removebg-preview.png" width="300" height="320" alt="">
+                        <!-- <div class="carousel-caption"></div>
+                        <h5>Baking Classes</h5> -->
+                        <!-- <p>want to learn how to bake?</p> -->
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</section>
+<section>
+    <h2>Our Products and Services</h2>
+         <div class="card-deck my-card">
+            <div class="card my-card1">
+                <a href="{{ url_for('cake_order') }}"><button id="BTN" type="button" class="btn btn-danger">shop cakes</button></a>
+
+            </div>
+            <div class="card my-card2">
+                <a href="{{url_for('signup_page')}}"><button id="BTN" type="button" class="btn btn-danger">attend a class</button></a>
+            </div>
+            <div class="card my-card3">
+                <button id="BTN" type="button" class="btn btn-danger">shop cupcakes</button>
+
+            </div>
+         </div>
+</section>
+
+
+<section class="custom-order">
+      <h2>Need a custom designed cake?</h2>
+      <a href="{{ url_for('custom_order') }}"><button id="BTN" type="button" class="btn btn-danger">click here for custom order</button></a>
+
+</section>
+
+
+<section class="customer-reviews">
+    <div class="cards">
+        
+    </div>
+</section>
+
+<section class="footer" id="contact">
+    <h4><u> Contact us </u></h4>
+    <a class="social" href="www.instagram.com/sweetlemons">instagram</a>
+    <a class="social" href="#">twitter</a>
+    <a class="social" href="www.facebook.com/sweetlemons">facebook</a>
+    <a class="social" href="#">sweetlemons@gmail.com</a>
+    <p class="footer_p_tag"> copyright @shantelMolemoshi 2023 </p>
+</section>
+
+    
+</body>
+</html>

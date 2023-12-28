@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title%}
+    Cake order
+{% endblock %}
+
+{% block content%}
+<div class="container" id="Products">
+    <h2>🦋   Sweetlemons cakes   🦋</h2>
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-3 mt-3">
+            <div class="card">
+                <img src="data:image/jpeg;base64,{{ product.image.decode('utf-8') }}" alt="{{ product.p_name }}"  height="200">
+                <div class="card-body">
+                    <h5 class="text-center">{{ product.p_name }}</h5>
+                    <p class="text-center">{{ product.p_price }}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{{url_for('chosen_cake', id=product.id)}}" class="btn btn-sm btn-danger ">Order Now</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+<section class="custom-order mt-5">
+      <h2>Need a custom designed cake?</h2>
+      <a href="{{ url_for('custom_order') }}"><button id="BTN" type="button" class="btn btn-danger">click here for custom order</button></a>
+
+</section>
+{% endblock %}
