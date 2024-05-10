@@ -1,3 +1,4 @@
+
 /* the whole body */
 body{
     font-weight: bold;
@@ -12,7 +13,7 @@ body{
     color:  white;
     font-size: 1.5rem;
     font-weight: lighter;
-    text-shadow: 2px 3px 1px lightcoral;
+    text-shadow: 2px 3px 1px lightcoral; 
 
     
 }
