@@ -26,8 +26,8 @@ bcrypt = Bcrypt(app)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
-my_Email = "lemoshang2000@gmail.com"
-my_Password = "crau pqtr upot drfa"
+my_Email = os.environ.get('MYEMAIL')
+my_Password = os.environ.get('MYPASSWORDLEMONS')
 
 
 @app.route('/')
