@@ -16,7 +16,7 @@ ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
 app = Flask(__name__)
 # for my database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///bakingShop.sqlite3'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DB_URI','sqlite:///bakingShop.sqlite3')
 app.config['SECRET_KEY'] = 'Mysweetlemonsapp'
 db = SQLAlchemy()
 db.init_app(app)
